@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Введите название продукта"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/search_et"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Введите название продукта"
+        android:layout_marginLeft="30dp"
+        android:textColor="#000"
+        android:background="@drawable/editetxt_bottom_border"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Цена"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp">
+
+        <EditText
+            android:id="@+id/lowCost"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:background="@drawable/editetxt_bottom_border"
+
+            android:hint="От"
+            android:inputType="number"
+            />
+
+
+        <EditText
+            android:id="@+id/highCost"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:background="@drawable/editetxt_bottom_border"
+            android:layout_marginLeft="30dp"
+            android:hint="До"
+            android:inputType="number"
+
+            />
+    </LinearLayout>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio_costAscend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Сортировать по увелечению цены"/>
+
+        <RadioButton
+            android:id="@+id/radio_costDescend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Сортировать по убыванию цены"/>
+
+
+    </RadioGroup>
+    <Button
+        android:id="@+id/search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Поиск"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"/>
+
+
+</LinearLayout>
