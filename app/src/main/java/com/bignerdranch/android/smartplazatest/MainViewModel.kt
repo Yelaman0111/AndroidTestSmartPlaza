@@ -14,9 +14,9 @@ class MainViewModel(private val repository: Repository):ViewModel() {
     val getNextProductResponse: MutableLiveData<Response<ProductList>> = MutableLiveData()
 
     fun getProduct(search: String,
-                   highCost: Int,
-                   sortName: String,
-                   lowCost: Int,
+                   highCost: Int?,
+                   sortName: String?,
+                   lowCost: Int?,
                    pageSize: Int,
                    pageNumber: Int){
         viewModelScope.launch {
@@ -26,9 +26,9 @@ class MainViewModel(private val repository: Repository):ViewModel() {
     }
 
     fun getNextPage(search: String,
-                   highCost: Int,
-                   sortName: String,
-                   lowCost: Int,
+                   highCost: Int?,
+                   sortName: String?,
+                   lowCost: Int?,
                    pageSize: Int,
                    pageNumber: Int){
         viewModelScope.launch {

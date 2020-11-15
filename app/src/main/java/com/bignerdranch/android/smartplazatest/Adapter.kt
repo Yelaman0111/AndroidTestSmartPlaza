@@ -14,10 +14,14 @@ class Adapter(private val context: Activity?, private val Products: List<Product
 
 
     fun addAll(data: List<Product>) {
-        (Products as ArrayList<Product>?)!!.clear()
+
         (Products as ArrayList<Product>?)!!.addAll(data)
 
 
+        notifyDataSetChanged()
+    }
+    fun clearAll(){
+        (Products as ArrayList<Product>?)!!.clear()
         notifyDataSetChanged()
     }
 

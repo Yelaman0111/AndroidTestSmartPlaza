@@ -10,12 +10,20 @@ interface SimpleApi {
 
     @GET("products")
     suspend fun getProduct(@Query("search") search: String,
-                           @Query("highCost") highCost: Int,
-                           @Query("sortName") sortName: String,
-                           @Query("lowCost") lowCost: Int,
+                           @Query("highCost") highCost: Int?,
+                           @Query("sortName") sortName: String?,
+                           @Query("lowCost") lowCost: Int?,
                            @Query("pageSize") pageSize: Int,
                            @Query("pageNumber") pageNumber: Int
     ): Response<ProductList>
 
+    @GET("products")
+    suspend fun getNextProduct(@Query("search") search: String,
+                           @Query("highCost") highCost: Int?,
+                           @Query("sortName") sortName: String?,
+                           @Query("lowCost") lowCost: Int?,
+                           @Query("pageSize") pageSize: Int,
+                           @Query("pageNumber") pageNumber: Int
+    ): Response<ProductList>
 
 }

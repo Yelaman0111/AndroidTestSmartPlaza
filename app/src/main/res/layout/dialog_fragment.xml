@@ -5,25 +5,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Введите название продукта"
-        android:layout_marginBottom="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="30dp"
-        android:textSize="20dp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:textSize="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
         />
 
     <EditText
         android:id="@+id/search_et"
-        android:layout_width="250dp"
-        android:layout_height="20dp"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_20sdp"
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="Введите название продукта"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="@dimen/_20sdp"
         android:textColor="#000"
         android:background="@drawable/editetxt_bottom_border"/>
 
@@ -33,10 +33,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Цена"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="20dp"
-
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         />
 
 
@@ -44,15 +43,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="30dp">
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp">
 
         <EditText
             android:id="@+id/lowCost"
-            android:layout_width="100dp"
-            android:layout_height="20dp"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_20sdp"
             android:background="@drawable/editetxt_bottom_border"
-
             android:hint="От"
             android:inputType="number"
             />
@@ -60,10 +58,10 @@
 
         <EditText
             android:id="@+id/highCost"
-            android:layout_width="100dp"
-            android:layout_height="20dp"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_20sdp"
             android:background="@drawable/editetxt_bottom_border"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="@dimen/_30sdp"
             android:hint="До"
             android:inputType="number"
 
@@ -75,7 +73,7 @@
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="@dimen/_10sdp"
         android:orientation="vertical">
 
         <RadioButton
@@ -96,10 +94,11 @@
     </RadioGroup>
     <Button
         android:id="@+id/search_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/_150sdp"
         android:layout_height="wrap_content"
         android:text="Поиск"
-        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_10sdp"
         android:layout_gravity="center_horizontal"/>
 
 
