@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bignerdranch.android.smartplazatest.model.Product
 import com.squareup.picasso.Picasso
+import android.content.Intent
 
 class Adapter(private val context: Activity?, private val Products: List<Product>, private val mRowLayout: Int): RecyclerView.Adapter<Adapter.MyViewHolder>() {
 
@@ -39,6 +40,17 @@ class Adapter(private val context: Activity?, private val Products: List<Product
         holder.name.text = Products[position].name
         holder.price.text = Products[position].price.toString() + " тг"
 
+
+        holder.itemView.setOnClickListener {
+            context!!.startActivity(Intent(context,DetailsActivity::class.java)
+                .putExtra("Name", Products[position].name)
+                .putExtra("Price", Products[position].price)
+                .putExtra("Photo", Products[position].photo_1)
+                .putExtra("Desc", Products[position].description)
+            )
+
+
+        }
 
         val picasso:Picasso = Picasso.get()
             picasso.load("https://api.smartplaza.kz/mp/products/photos/" + Products[position].photo_1)

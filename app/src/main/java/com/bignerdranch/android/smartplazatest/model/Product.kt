@@ -8,5 +8,7 @@ data class ProductList (
 data class Product(
     @SerializedName("name")  val name: String,
     @SerializedName("photo_1")  val photo_1: String,
+    @SerializedName("description")  val description: String,
     @SerializedName("price")  val price: Int
+
 )
